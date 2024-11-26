@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Logan Cadman's portfolio showcasing research, systems administration expertise, and collaboration in technology.">
+  <title>Logan Cadman</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 20px 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff; /* Change this to white or another color that fits your theme */
+      background-color: #000; /* Black background to match the cards */
+      padding: 10px 15px; /* Add padding for button-like appearance */
+      border-radius: 5px; /* Round the corners */
+      transition: background-color 0.3s, color 0.3s; /* Smooth color transitions */
+    }
+    nav a:hover {
+      background-color: #333; /* Slightly lighter black for hover effect */
+      color: #f4f4f4; /* Light gray for hover text color */
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #0078d4;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #005bb5;
+    }
+    .card {
+      background: #000; /* Changed background to black */
+      color: #fff; /* Set text color to white for better contrast */
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
+    details {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Logan Cadman</h1>
+    <p>Building better systems through innovation, research, and collaboration</p>
+    <div style="display: flex; justify-content: center; gap: 20px; align-items: center; margin-top: 20px;">
+      <a href="https://github.com/Lcadman/lcadman" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="50" height="50">
+        <span>Lcadman</span>
+      </a>
+      <a href="https://www.linkedin.com/in/logan-cadman-a9704616b" target="_blank" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="50" height="50">
+        <span>logan-cadman-a9704616b</span>
+      </a>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m Logan, a graduate student at Colorado State University studying computer science. I manage workstations, research networks, and explore the boundaries of technology. I’m passionate about empowering teams through technology, solving technical challenges, and fostering meaningful collaboration.</p>
+    </section>
+
+    <section id="features">
+      <h2>Highlights</h2>
+      <div class="card">
+        <h3>Graduate Research</h3>
+        <p>Exploring the intersection of software engineering and network performance with advanced techniques.</p>
+      </div>
+      <div class="card">
+        <h3>Systems Administration</h3>
+        <p>Managing complex Linux systems for collaborative and educational environments.</p>
+      </div>
+      <div class="card">
+        <h3>Collaboration</h3>
+        <p>Leading initiatives to improve team communication and collaboration for success.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>Earned a B.S. in Computer Science and currently pursuing a Master’s degree while working as a Systems Administrator.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <details>
+        <summary>Systems Administrator (2020–Present)</summary>
+        <ul>
+          <li>Manage Linux servers, NFS directories, and collaborative workstations.</li>
+          <li>Improved network performance monitoring for research teams.</li>
+          <li>Supported students in CS courses by maintaining robust lab environments.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Research Assistant (2022–Present)</summary>
+        <ul>
+          <li>Exploring communication patterns in software engineering teams.</li>
+          <li>Leveraged tools like GitHub and Ansible to analyze productivity.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>View my complete professional history and skills below.</p>
+      <a href="resume.pdf" target="_blank" class="button" aria-label="Download Resume">Download My Resume</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out!</p>
+      <a href="mailto:lcadman@colostate.edu" class="button">Email Me</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Logan Cadman</p>
+  </footer>
+</body>
+</html>
