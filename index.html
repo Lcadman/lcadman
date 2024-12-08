@@ -75,6 +75,66 @@
     details {
       margin-bottom: 10px;
     }
+    /* Courses Section with Flipping Cards */
+    #courses {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner,
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .card-front {
+      background-color: #292929;
+      color: #fff;
+    }
+
+    .card-back {
+      background-color: #1c1c1c;
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    h3 {
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
@@ -110,13 +170,13 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hi, I’m Logan Cadman, a graduate student in Computer Science at Colorado State University 🐏💻. My path here has been anything but traditional—I started out as an automotive technician 🔧, working with my hands and solving mechanical problems. But along the way, I discovered a love for technology and its potential to make a real difference in people’s lives 🌍✨.
+        Hi, I’m Logan Cadman, a graduate student in Computer Science at Colorado State University. My path here has been anything but traditional—I started out as an automotive technician, working with my hands and solving mechanical problems. But along the way, I discovered a love for technology and its potential to make a real difference in people’s lives.
       </p>
       <p>
-        At CSU, I’ve had the chance to grow in ways I never expected. From leading student orientation programs during the challenges of COVID 😷🧑‍🤝‍🧑 to working as a Systems Administrator for the Computer Science department 🖥️🔐, I’ve honed my skills as a leader, problem-solver, and computer scientist.
+        At CSU, I’ve had the chance to grow in ways I never expected. From leading student orientation programs during the challenges of COVID to working as a Systems Administrator for the Computer Science department, I’ve honed my skills as a leader, problem-solver, and computer scientist.
       </p>
       <p>
-        Interning at VMware deepened my passion for cybersecurity and networking 🌐, showing me how technology can solve big problems, like reducing environmental impact through virtualization 🌿. I’m driven by the idea that technology isn’t just about code and systems—it’s about people 🫂. I’m excited to keep learning, building, and finding new ways to use tech to make a positive impact 🚀.
+        Interning at VMware deepened my passion for cybersecurity and networking, showing me how technology can solve big problems, like reducing environmental impact through virtualization. I’m driven by the idea that technology isn’t just about code and systems—it’s about people. I’m excited to keep learning, building, and finding new ways to use tech to make a positive impact.
       </p>
     </section>
 
@@ -125,7 +185,7 @@
       <div class="card">
         <h3>Graduate Research</h3>
         <p>
-          Investigating internet transmission errors through the HIPFT project, focusing on error detection and data analysis using custom Linux kernel modifications and automated pipelines.
+          Investigating internet transmission errors through the HIPFT project, focusing on error detection and data analysis. Made custom Linux kernel modifications and automated log connection pipelines. Maintained server infrastructure for data collection and analysis.
         </p>
       </div>
       <div class="card">
@@ -172,160 +232,430 @@
 
     <section id="experience">
       <h2>Experience</h2>
-      <details>
-        <summary>Graduate Research Assistant @ Colorado State University (2023–Present)</summary>
-        <ul>
-          <li>Investigated internet transmission errors through HIPFT, simulating real-world issues with custom Linux kernel modifications.</li>
-          <li>Developed automated pipelines to collect and analyze over 10,000 logs for error detection and benchmarking.</li>
-          <li>Applied time series analysis and machine learning to detect patterns and mitigate DDoS attacks.</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Systems Administrator @ Colorado State University (2020–Present)</summary>
-        <ul>
-          <li>Managed and maintained 600+ Linux systems, ensuring smooth operations for students, faculty, and researchers.</li>
-          <li>Designed and implemented the migration from NIS to OpenLDAP, enhancing system security and user management.</li>
-          <li>Automated GPU monitoring and enforced resource limits for efficient lab usage.</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Technical Support Engineer Intern @ VMware (2022)</summary>
-        <ul>
-          <li>Collaborated with systems administrators to resolve complex VMware vCenter Server networking issues.</li>
-          <li>Completed training toward VMware Certified Professional Certification.</li>
-          <li>Supported enterprise-level clients in troubleshooting cloud and virtualization solutions.</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Orientation Team Leader @ Colorado State University (2020–2021)</summary>
-        <ul>
-          <li>Supervised 26 orientation leaders to welcome 5,296 students, fostering community through large-scale events.</li>
-          <li>Conducted interviews for over 200 candidates and led training on communication and teamwork.</li>
-          <li>Redesigned orientation programs during COVID-19 to adapt to virtual and in-person formats.</li>
-        </ul>
-      </details>
+      <div class="experience-item">
+        <details>
+          <summary>
+            <span class="icon">+</span>
+            Graduate Research Assistant @ Colorado State University (2023–Present)
+          </summary>
+          <ul>
+            <li>Investigated internet transmission errors through HIPFT, simulating real-world issues with custom Linux kernel modifications.</li>
+            <li>Developed automated pipelines to collect and analyze over 10,000 logs for error detection and benchmarking.</li>
+            <li>Applied time series analysis and machine learning to detect patterns and mitigate DDoS attacks.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="experience-item">
+        <details>
+          <summary>
+            <span class="icon">+</span>
+            Systems Administrator @ Colorado State University (2020–Present)
+          </summary>
+          <ul>
+            <li>Managed and maintained 600+ Linux systems, ensuring smooth operations for students, faculty, and researchers.</li>
+            <li>Designed and implemented the migration from NIS to OpenLDAP, enhancing system security and user management.</li>
+            <li>Automated GPU monitoring and enforced resource limits for efficient lab usage.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="experience-item">
+        <details>
+          <summary>
+            <span class="icon">+</span>
+            Technical Support Engineer Intern @ VMware (2022)
+          </summary>
+          <ul>
+            <li>Collaborated with systems administrators to resolve complex VMware vCenter Server networking issues.</li>
+            <li>Completed training toward VMware Certified Professional Certification.</li>
+            <li>Supported enterprise-level clients in troubleshooting cloud and virtualization solutions.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="experience-item">
+        <details>
+          <summary>
+            <span class="icon">+</span>
+            Orientation Team Leader @ Colorado State University (2020–2021)
+          </summary>
+          <ul>
+            <li>Supervised 26 orientation leaders to welcome 5,296 students, fostering community through large-scale events.</li>
+            <li>Conducted interviews for over 200 candidates and led training on communication and teamwork.</li>
+            <li>Redesigned orientation programs during COVID-19 to adapt to virtual and in-person formats.</li>
+          </ul>
+        </details>
+      </div>
     </section>
 
-    <section id="cars">
-      <h2>Cars I Like</h2>
-      <ul>
-        <li>B8 Audi S4 and 8R Audi SQ5</li>
-        <li>2016 BMW M3 (F80)</li>
-        <li>Audi TTRS 2012-2013 or 2016</li>
-        <li>Porsche 997 Gen 2 Turbo 2010-2013 (or Turbo S)</li>
-        <li>Porsche 996 Facelift 2001-2005</li>
-        <li>2017-2019 VW Golf R</li>
-        <li>E92 BMW M3</li>
-        <li>2015 or newer Chevy SS</li>
-        <li>2000 Land Rover Discovery</li>
-        <li>Land Cruiser 80 or 100 Series (1990-2007)</li>
-        <li>2007/2008 Audi RS4</li>
-        <li>1984 Porsche Carrera 911 Coupe</li>
-      </ul>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Coming Soon!</h3>
+          <p>
+            todo
+          </p>
+          <a href="https://logancadman.com" target="_blank" class="button">Learn More</a>
+        </div>
+        <div class="project-card">
+          <h3>Coming Soon!</h3>
+          <p>
+            todo
+          </p>
+          <a href="https://logancadman.com" target="_blank" class="button">Learn More</a>
+        </div>
+        <div class="project-card">
+          <h3>Coming Soon!</h3>
+          <p>
+            todo
+          </p>
+          <a href="https://logancadman.com" target="_blank" class="button">Learn More</a>
+        </div>
+      </div>
     </section>
     
-    <section id="songs">
-      <h2>Songs I Like</h2>
-      <div class="songs-grid">
-        <div class="card">
-          <h3>Doc</h3>
-          <p>Artist: Chocolate Milk</p>
-          <p>Released: 2023</p>
+    <section id="courses">
+      <h2>Courses</h2>
+      <div class="courses-grid">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-542</h3>
+              <p>Natural Language Processing</p>
+              <p>Level: Graduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Covers advanced NLP techniques such as parsing, language models, and applying machine learning to text analysis.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>I Remember Everything</h3>
-          <p>Artist: Zach Bryan, Kacey Musgraves</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-580B2</h3>
+              <p>Human/Social Factors in Software Engineering</p>
+              <p>Level: Graduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Examines the impact of social and human dynamics on software teams, focusing on communication and collaboration.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Mi Amor</h3>
-          <p>Artist: Hermanos Gutiérrez</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-501</h3>
+              <p>Introduction to Research in Computer Science</p>
+              <p>Level: Graduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Introduces research methods, literature reviews, and effective academic communication in computer science.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Cowboy Gangster Politician</h3>
-          <p>Artist: Goldie Boutilier</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-510</h3>
+              <p>Image Computation</p>
+              <p>Level: Graduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Explores computational techniques for image processing, focusing on algorithms and real-world applications.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>My God Has a Telephone</h3>
-          <p>Artist: The Flying Stars of Brooklyn NY, Aaron Frazer</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-535</h3>
+              <p>Big Data</p>
+              <p>Level: Graduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Focuses on large-scale data processing, including Hadoop, Spark, and distributed systems for analytics.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>East Side of Sorrow</h3>
-          <p>Artist: Zach Bryan</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-514</h3>
+              <p>Software Product and Process Evaluation</p>
+              <p>Level: Graduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Teaches evaluation techniques for software products, processes, and methodologies for quality assurance.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Esperanza</h3>
-          <p>Artist: Hermanos Gutiérrez</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-545</h3>
+              <p>Machine Learning</p>
+              <p>Level: Graduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Covers machine learning fundamentals, focusing on algorithms, classification, regression, and neural networks.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Wake Up</h3>
-          <p>Artist: Kowloon</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-415</h3>
+              <p>Software Testing</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Introduces methods for software testing, including test design, debugging, and quality assurance practices.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Pacific Telephone</h3>
-          <p>Artist: Papooz</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-458</h3>
+              <p>Blockchain Principles and Applications</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Explores blockchain concepts, including cryptocurrency, consensus mechanisms, and decentralized applications.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Lovely Day</h3>
-          <p>Artist: Bill Withers</p>
-          <p>Released: 1977</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-464</h3>
+              <p>Principles of Human-Computer Interaction</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Examines the design, implementation, and evaluation of user interfaces for improved user experiences.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Thunderbird</h3>
-          <p>Artist: Hermanos Gutiérrez</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-456</h3>
+              <p>Modern CyberSecurity</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Covers principles and practices of cybersecurity, including cryptography, network security, and threat mitigation.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Solar Pilgrim</h3>
-          <p>Artist: Twain</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-457</h3>
+              <p>Computer Networks and the Internet</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Introduces networking principles, including protocols, architecture, and the Internet's technical foundations.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Kahlil Gibran</h3>
-          <p>Artist: STRFKR</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-462</h3>
+              <p>Engaging in Virtual Worlds</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Focuses on virtual and augmented reality concepts, including interface design and immersive experiences.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Panama</h3>
-          <p>Artist: Sports</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-320</h3>
+              <p>Algorithms - Theory and Practice</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p>Covers algorithm design, analysis, and implementation, focusing on efficiency and computational complexity.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Nine Ball</h3>
-          <p>Artist: Boys Of Faith</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-356</h3>
+              <p>Systems Security</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Think I'm in Love with You</h3>
-          <p>Artist: Chris Stapleton</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-370</h3>
+              <p>Operating Systems</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Open Your Eyes</h3>
-          <p>Artist: STRFKR</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-314</h3>
+              <p>Software Engineering</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Back On 74</h3>
-          <p>Artist: Jungle</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-270</h3>
+              <p>Computer Organization</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Tourniquet</h3>
-          <p>Artist: Zach Bryan</p>
-          <p>Released: 2023</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-253</h3>
+              <p>Software Development with C++</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Ha Ha, Hee Hee</h3>
-          <p>Artist: Sly & The Family Stone</p>
-          <p>Released: 1971</p>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-220</h3>
+              <p>Discrete Structures and their Applications</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-165</h3>
+              <p>CS2--Data Structures</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-163</h3>
+              <p>CS1---No Prior Programming Experience</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CS-150</h3>
+              <p>Introduction to Programming (CS0)</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CIS-355</h3>
+              <p>Business Database Systems</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CIS-320</h3>
+              <p>Project Management for Information Systems</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="card-inner">
+            <div class="card-front">
+              <h3>CIS-240</h3>
+              <p>Application Design and Development</p>
+              <p>Level: Undergraduate</p>
+            </div>
+            <div class="card-back">
+              <h3>About the Course</h3>
+              <p> todo </p>
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

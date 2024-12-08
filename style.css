@@ -17,14 +17,14 @@ header {
 }
 
 header h1 {
-  font-size: 4em;
+  font-size: 4rem;
   margin: 0;
   color: #f5f5f5;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 header p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin-top: 1em;
   color: #c7c7c7;
 }
@@ -40,7 +40,7 @@ section {
 }
 
 section h2 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: #e5e5e5;
   margin-bottom: 0.5em;
 }
@@ -48,7 +48,7 @@ section h2 {
 section p {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #b5b5b5;
   line-height: 1.8;
 }
@@ -58,18 +58,19 @@ section p {
   display: inline-block;
   padding: 0.8em 2em;
   margin-top: 1em;
-  background: #007acc; /* Vibrant blue for Warp.dev feel */
+  background: #007acc; /* Vibrant blue */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-  background: #005f99; /* Darker blue on hover */
+  background: #005bb5; /* Darker blue on hover */
   transform: translateY(-2px); /* Lift on hover */
+  color: #e0e0e0; /* Lighter text for better contrast */
 }
 
 /* Cards */
@@ -90,12 +91,12 @@ section p {
 }
 
 .card h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #eaeaea;
 }
 
 .card p {
-  font-size: 1em;
+  font-size: 1rem;
   color: #c7c7c7;
 }
 
@@ -104,7 +105,7 @@ footer {
   padding: 2em 1em;
   background-color: #101010; /* Dark, seamless footer */
   color: #b5b5b5;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -121,46 +122,69 @@ footer {
 }
 
 #cars li {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin: 10px 0;
 }
 
-/* Section Styling */
-#songs {
+/* Courses Section */
+#courses {
   text-align: center;
   padding: 40px 20px;
   background-color: #1c1c1c; /* Slightly darker background for contrast */
   color: #ffffff; /* Ensure good readability */
 }
 
-#songs h2 {
-  font-size: 2em;
+#courses h2 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: #f4f4f4; /* Light gray for the title */
 }
 
-/* Grid Styling */
-.songs-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Grid Styling for Courses */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Card Styling */
-.songs-grid .card {
-  background: #292929; /* Dark gray background for the cards */
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-  text-align: center;
-  width: 200px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Card Styling for Courses */
+.courses-grid .card {
+  perspective: 1000px; /* For 3D flipping */
+  cursor: pointer;
 }
 
-.songs-grid .card:hover {
-  transform: translateY(-8px); /* Lift effect on hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.courses-grid .card:hover .card-inner,
+.courses-grid .card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-front {
+  background: #292929; /* Dark gray for the front */
+  color: #fff;
+}
+
+.card-back {
+  background: #1c1c1c; /* Slightly darker for the back */
+  color: #fff;
+  transform: rotateY(180deg);
 }
 
 /* Placeholder Tile */
@@ -173,14 +197,155 @@ footer {
 }
 
 /* Card Text Styling */
-.songs-grid .card h3 {
-  font-size: 1.2em;
+.courses-grid .card h3 {
+  font-size: 1.2rem;
   margin-bottom: 5px;
   color: #eaeaea; /* Light gray for titles */
 }
 
-.songs-grid .card p {
-  font-size: 0.9em;
-  color: #b5b5b5; /* Subtle gray for artist and year */
+.courses-grid .card p {
+  font-size: 0.9rem;
+  color: #b5b5b5; /* Subtle gray for text */
   margin: 5px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 2em 1em;
+  }
+
+  section {
+    padding: 2em 1em;
+  }
+
+  .courses-grid .card {
+    width: 100%; /* Make cards span full width on smaller screens */
+  }
+}
+/* Experience Section */
+#experience {
+  background-color: #151515; /* Match other sections */
+  padding: 40px 20px;
+  color: #f5f5f5;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e5e5e5;
+}
+
+/* Experience Item */
+.experience-item {
+  margin-bottom: 20px;
+}
+
+details {
+  background-color: #292929;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+details[open] {
+  background-color: #1c1c1c; /* Slightly darker when expanded */
+}
+
+summary {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 30px;
+  transition: color 0.3s;
+}
+
+summary:hover {
+  color: #e0e0e0; /* Subtle lightening on hover */
+}
+
+summary .icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+details[open] summary .icon {
+  content: "–"; /* Change the icon when expanded */
+}
+
+ul {
+  margin: 15px 0 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #c7c7c7;
+  transition: color 0.3s;
+}
+
+li:hover {
+  color: #e0e0e0; /* Highlight list item on hover */
+}
+
+/* Animation */
+details[open] summary::after {
+  content: "–";
+  position: absolute;
+  right: 15px;
+  font-size: 1.5rem;
+}
+
+details:not([open]) summary::after {
+  content: "+";
+  position: absolute;
+  right: 15px;
+  font-size: 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #292929;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.project-card .button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007acc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.project-card .button:hover {
+  background-color: #005bb5;
 }
