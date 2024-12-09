@@ -1,56 +1,78 @@
 /* Global Styles */
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0d0d0d; /* Near-black for darker look */
-  color: #f5f5f5; /* Off-white for contrast */
+  background-color: #000000; /* Pure black background */
+  color: #ffffff; /* Bright white text */
   text-align: center;
   scroll-behavior: smooth;
 }
 
 /* Header */
 header {
-  padding: 4em 1em;
-  background: linear-gradient(to bottom, #101010, #0d0d0d); /* Darker gradient */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  background-color: #000000; /* Consistent pure black */
+  padding: 20px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
 }
 
 header h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
+  color: #ffffff; /* Bright white */
   margin: 0;
-  color: #f5f5f5;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 header p {
-  font-size: 1.2rem;
-  margin-top: 1em;
-  color: #c7c7c7;
+  color: #e0e0e0; /* Subtle gray for supporting text */
 }
 
-/* Section Styles */
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1a1a1a; /* Dark gray for contrast */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #333333; /* Slightly lighter gray for hover effect */
+  color: #ffffff;
+}
+
+/* Sections */
 section {
-  width: 100%;
-  margin: 0; /* Remove auto-centering margins */
-  padding: 4em 1em; /* Keep padding for content spacing */
-  background-color: #151515; /* Retain background color */
-  border-radius: 0; /* Optional: Remove rounded corners */
-  box-shadow: none; /* Optional: Remove box-shadow for a cleaner edge-to-edge look */
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
 section h2 {
-  font-size: 2.5rem;
-  color: #e5e5e5;
-  margin-bottom: 0.5em;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 section p {
-  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0; /* Subtle gray for readability */
   margin: 0 auto;
-  font-size: 1.2rem;
-  color: #b5b5b5;
-  line-height: 1.8;
+  max-width: 800px;
 }
 
 /* Buttons */
@@ -58,8 +80,8 @@ section p {
   display: inline-block;
   padding: 0.8em 2em;
   margin-top: 1em;
-  background: #007acc; /* Vibrant blue */
-  color: #fff;
+  background: #007acc; /* Warp-inspired blue */
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -69,49 +91,44 @@ section p {
 
 .button:hover {
   background: #005bb5; /* Darker blue on hover */
-  transform: translateY(-2px); /* Lift on hover */
-  color: #e0e0e0; /* Lighter text for better contrast */
+  transform: translateY(-2px);
+  color: #e0e0e0;
 }
 
 /* Cards */
 .card {
   display: inline-block;
-  background-color: #101010; /* Match near-black with subtle variation */
-  color: #fff;
+  background-color: #1a1a1a; /* Dark gray */
+  color: #ffffff;
   padding: 2em;
   margin: 1em;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 .card h3 {
   font-size: 1.5rem;
-  color: #eaeaea;
+  color: #ffffff;
 }
 
 .card p {
   font-size: 1rem;
-  color: #c7c7c7;
+  color: #e0e0e0;
 }
 
 /* Footer */
 footer {
   padding: 2em 1em;
-  background-color: #101010; /* Dark, seamless footer */
-  color: #b5b5b5;
+  background-color: #000000;
+  color: #e0e0e0;
   font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Animations */
-* {
-  transition: all 0.3s ease-in-out;
 }
 
 /* Cars Section */
@@ -130,26 +147,24 @@ footer {
 #courses {
   text-align: center;
   padding: 40px 20px;
-  background-color: #1c1c1c; /* Slightly darker background for contrast */
-  color: #ffffff; /* Ensure good readability */
+  background-color: #1a1a1a; /* Dark gray background */
+  color: #ffffff;
 }
 
 #courses h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #f4f4f4; /* Light gray for the title */
+  color: #ffffff;
 }
 
-/* Grid Styling for Courses */
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Card Styling for Courses */
 .courses-grid .card {
-  perspective: 1000px; /* For 3D flipping */
+  perspective: 1000px;
   cursor: pointer;
 }
 
@@ -158,15 +173,15 @@ footer {
   width: 100%;
   height: 200px;
   transform-style: preserve-3d;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s;
 }
 
-.courses-grid .card:hover .card-inner,
-.courses-grid .card.flipped .card-inner {
+.courses-grid .card:hover .card-inner {
   transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -177,175 +192,74 @@ footer {
 }
 
 .card-front {
-  background: #292929; /* Dark gray for the front */
-  color: #fff;
+  background: #292929;
+  color: #ffffff;
 }
 
 .card-back {
-  background: #1c1c1c; /* Slightly darker for the back */
-  color: #fff;
+  background: #1a1a1a;
+  color: #ffffff;
   transform: rotateY(180deg);
 }
 
-/* Placeholder Tile */
-.placeholder-tile {
-  background: #000; /* Black tile */
-  width: 100%;
-  height: 150px;
-  border-radius: 8px;
-  margin-bottom: 10px; /* Add space between tile and text */
-}
-
-/* Card Text Styling */
-.courses-grid .card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: #eaeaea; /* Light gray for titles */
-}
-
-.courses-grid .card p {
-  font-size: 0.9rem;
-  color: #b5b5b5; /* Subtle gray for text */
-  margin: 5px 0;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  header {
-    padding: 2em 1em;
-  }
-
-  section {
-    padding: 2em 1em;
-  }
-
-  .courses-grid .card {
-    width: 100%; /* Make cards span full width on smaller screens */
-  }
-}
 /* Experience Section */
 #experience {
-  background-color: #151515; /* Match other sections */
+  background-color: #0d0d0d; /* Match other sections */
   padding: 40px 20px;
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
-#experience h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #e5e5e5;
-}
-
-/* Experience Item */
 .experience-item {
   margin-bottom: 20px;
 }
 
 details {
-  background-color: #292929;
+  background-color: #1a1a1a;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   padding: 15px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s;
 }
 
 details[open] {
-  background-color: #1c1c1c; /* Slightly darker when expanded */
+  background-color: #0d0d0d;
 }
 
 summary {
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #f4f4f4;
+  color: #ffffff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   position: relative;
   padding-right: 30px;
-  transition: color 0.3s;
 }
 
 summary:hover {
-  color: #e0e0e0; /* Subtle lightening on hover */
+  color: #e0e0e0;
 }
 
-summary .icon {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-details[open] summary .icon {
-  content: "–"; /* Change the icon when expanded */
-}
-
-ul {
-  margin: 15px 0 0;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #c7c7c7;
-  transition: color 0.3s;
-}
-
-li:hover {
-  color: #e0e0e0; /* Highlight list item on hover */
-}
-
-/* Animation */
 details[open] summary::after {
   content: "–";
   position: absolute;
   right: 15px;
-  font-size: 1.5rem;
 }
 
 details:not([open]) summary::after {
   content: "+";
   position: absolute;
   right: 15px;
-  font-size: 1.5rem;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  header,
+  section {
+    padding: 2em 1em;
+  }
 
-.project-card {
-  background-color: #292929;
-  border-radius: 10px;
-  padding: 20px;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.project-card .button {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #007acc;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.project-card .button:hover {
-  background-color: #005bb5;
+  .courses-grid .card {
+    width: 100%;
+  }
 }
