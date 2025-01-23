@@ -147,7 +147,7 @@ footer {
 #courses {
   text-align: center;
   padding: 40px 20px;
-  background-color: #1a1a1a; /* Dark gray background */
+  background-color: #000000; /* Dark gray background */
   color: #ffffff;
 }
 
@@ -204,7 +204,7 @@ footer {
 
 /* Experience Section */
 #experience {
-  background-color: #0d0d0d; /* Match other sections */
+  background-color: #000000; /* Match other sections */
   padding: 40px 20px;
   color: #ffffff;
 }
