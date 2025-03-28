@@ -1,13 +1,13 @@
 ## Hi there 👋
 
-I’m Logan Cadman, a graduate student in Computer Science at Colorado State University. My journey to computer science has been anything but traditional—I started out as an automotive technician, solving mechanical problems and working with my hands. Along the way, I discovered a love for technology and how it can make a real difference in people’s lives.
+I’m Logan Cadman, a graduate student in Computer Science at Colorado State University. My career path has been anything but traditional—I started as an automotive technician, where I honed hands-on problem-solving skills. Over time, I discovered a passion for technology and how it can meaningfully impact people’s lives.
 
-At CSU, I’ve grown in ways I never expected. From leading student orientation programs during COVID to working as a Systems Administrator for the Computer Science department, I’ve developed my skills as a leader, problem-solver, and tech enthusiast. My internship at VMware introduced me to the exciting world of cybersecurity and networking, where I learned how technology can tackle big challenges like reducing environmental impact through virtualization.
+I developed my leadership abilities by serving as an Orientation Team Leader during COVID, then jumped into Systems Administration for the Computer Science department, which introduced me to Linux, networking, and DevOps. My internship at VMware reinforced just how powerful infrastructure and virtualization can be in tackling big challenges (including reducing environmental impact!). Now, under the guidance of Dr. Craig Partridge, I combine systems administration, C programming, and automation to explore advanced networking and infrastructure solutions.
 
 ### 🌟 Fun Facts About Me:
 - 🚗 **Car enthusiast**: Ask me anything about VWs or fun road trips!
 - 🏔️ **Mountain lover**: Whether it’s hiking, skiing, or just enjoying the view, I’m in my happy place when I’m in the mountains.
-- 🧠 **Curious learner**: Currently diving into natural language processing and always up for tackling a new tech challenge.
+- 🧠 **Curious learner**: Currently diving into artificial intelligence & bandit algorithms. Always up for tackling a new tech challenge.
 - 🎮 **Gamer at heart**: If I’m not coding, you might find me exploring open worlds or building cities.
 
 ### How to Reach Me:
