@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-I’m Logan Cadman, a graduate student in Computer Science at Colorado State University. My career path has been anything but traditional. I started as an automotive technician, where I honed hands-on problem-solving skills. Over time, I discovered a passion for technology and how it can meaningfully impact people’s lives.
+I’m Logan Cadman, a graduate student in Computer Science at Colorado State University. My career path has been anything but traditional. I started as an automotive technician, where I honed mu hands on problem solving skills. Over time, I discovered a passion for technology and how it can meaningfully impact people’s lives.
 
 I developed my leadership abilities by serving as an Orientation Team Leader during COVID, then jumped into Systems Administration for the Computer Science department, which introduced me to Linux, networking, and DevOps. My internship at VMware reinforced just how powerful infrastructure and virtualization can be in tackling big challenges (including reducing environmental impact!). Now, under the guidance of Dr. Craig Partridge, I combine systems administration, C programming, and automation to explore advanced networking and infrastructure solutions.
 
