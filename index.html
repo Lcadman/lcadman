@@ -162,9 +162,9 @@
       <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <h3>Coming Soon!</h3>
+          <h3>Adaptive Honeypots: Optimizing Dwell Time with Reinforcement Learning</h3>
           <p>
-            todo
+            This project explores how we can make honeypots smarter by using reinforcement learning to adapt their lifespan based on real-time network activity. Inspired by DSCOPE, a system that used fixed 10-minute honeypot sessions, I built a dynamic alternative that learns when to keep honeypots running longer to catch delayed or low-frequency attacks. The system runs on Google Cloud, spinning up honeypots, capturing TCP SYN traffic with tcpdump, and feeding contextual data (like connection rate, unique IPs, and traffic trends) into a tabular Q-learning agent. The agent learns to balance the value of captured data against resource usage, gradually favoring longer dwell times (like 45 minutes) in richer threat environments. Key takeaway: fixed honeypot durations can miss out on valuable attack data. By adapting in real time, this system captures more meaningful behavior from slow or stealthy adversaries.
           </p>
           <a href="https://logancadman.com" target="_blank" class="button">Learn More</a>
         </div>
