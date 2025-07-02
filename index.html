@@ -166,21 +166,28 @@
           <p>
             This project explores how we can make honeypots smarter by using reinforcement learning to adapt their lifespan based on real-time network activity. Inspired by DSCOPE, a system that used fixed 10-minute honeypot sessions, I built a dynamic alternative that learns when to keep honeypots running longer to catch delayed or low-frequency attacks. The system runs on Google Cloud, spinning up honeypots, capturing TCP SYN traffic with tcpdump, and feeding contextual data (like connection rate, unique IPs, and traffic trends) into a tabular Q-learning agent. The agent learns to balance the value of captured data against resource usage, gradually favoring longer dwell times (like 45 minutes) in richer threat environments. Key takeaway: fixed honeypot durations can miss out on valuable attack data. By adapting in real time, this system captures more meaningful behavior from slow or stealthy adversaries.
           </p>
-          <a href="https://logancadman.com" target="_blank" class="button">Learn More</a>
+          <a href="https://github.com/Lcadman/AdaptiveHoneypot" target="_blank" class="button">Learn More</a>
         </div>
         <div class="project-card">
-          <h3>Coming Soon!</h3>
+          <h3>Looking for Errors TCP Misses</h3>
           <p>
-            todo
+            Inspired by prior work suggesting undetected errors were becoming a problem on the Internet, we set out to create a measurement system to detect errors that the TCP checksum missed. We designed a client-server framework in which the servers sent known files to clients. We then compared the received data with the original file to identify undetected errors introduced by the network. We deployed this measurement framework on various public testbeds. Over the course of 9 months, we transferred a total of 26 petabytes of data. Scaling the measurement framework to capture a large number of errors proved to be a challenge. This paper focuses on the challenges encountered during the deployment of the measurement system. We also present the interim results, which suggest that the error problems seen in prior works may be caused by two distinct processes: (1) errors that slip past TCP and (2) file system failures. The interim results also suggest that the measurement system needs to be adjusted to collect exabytes of measurement data, rather than the petabytes that prior studies predicted.
           </p>
-          <a href="https://logancadman.com" target="_blank" class="button">Learn More</a>
+          <a href="https://par.nsf.gov/biblio/10601172-looking-errors-tcp-misses" target="_blank" class="button">Learn More</a>
         </div>
         <div class="project-card">
-          <h3>Coming Soon!</h3>
+          <h3>Learning 2048 with Reinforcement Learning</h3>
           <p>
-            todo
+            Project for CS545 at Colorado State University Fall 2023, by Chad Schwenke and Logan Cadman. This project utilizes AI to play the 2048 game.
           </p>
-          <a href="https://logancadman.com" target="_blank" class="button">Learn More</a>
+          <a href="https://github.com/Chadyshack/2048-reinforcement-learning" target="_blank" class="button">Learn More</a>
+        </div>
+        <div class="project-card">
+          <h3>Analyzing the Communication Patterns of Different Teammate Types in a Software Engineering Course Project</h3>
+          <p>
+            Effective communication is vital for the success of professional software engineering (SE) teams. As SE courses teach essential industry skills like teamwork and collaboration, ensuring effective communication becomes important in student projects. However, poor engagement from team members can lead to conflicts, uneven workloads, and diminished learning experiences. Teammate types such as Couch Potatoes, who contribute minimally, and “Hitchhikers”, who rely on others while taking credit, exacerbate these issues. In contrast, “Lone Wolves” work independently, potentially isolating themselves, while “Good Teammates” actively collaborate and contribute somewhat, driving team success. In this study, we aimed to investigate the communication patterns of teammate types such as Couch Potato, Hitchhiker, Lone Wolf, or Good Teammate during a SE testing course. We applied Ordered Network Analysis (ONA) to the conversational data of the teams to examine the distinct communication patterns of students whose contributions were either perceived positively (e.g., Good Teammates) or negatively (e.g., Couch Potato, Hitchhiker, Lone Wolf) by their peers. The findings reveal distinct communication behaviors across teammate types. While Good Teammates and Couch Potatoes discussed similar content, Good Teammates communicated more frequently and consistently throughout the project. Lone Wolves seldom engaged in pleasantries, reflecting a task-focused approach, whereas Hitchhikers rarely contributed substantively to technical discussions, such as pull requests, but often interacted through pleasantries. These patterns emphasize the need for early interventions and communication planning to promote accountability balance and effective student collaboration during class projects.
+          </p>
+          <a href="https://conf.researchr.org/details/fse-2025/fse-2025-software-engineering-education/5/Analyzing-the-Communication-Patterns-of-Different-Teammate-Types-in-a-Software-Engine" target="_blank" class="button">Learn More</a>
         </div>
       </div>
     </section>
