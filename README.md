@@ -1,18 +1,18 @@
 ## Hi there 👋
 
-I’m Logan Cadman, a graduate student in Computer Science at Colorado State University. My career path has been anything but traditional. I started as an automotive technician, where I honed mu hands on problem solving skills. Over time, I discovered a passion for technology and how it can meaningfully impact people’s lives.
+I’m Logan Cadman. I work as a Systems Engineer at Visa and I recently finished my M.S. in Computer Science at Colorado State University. My path into tech wasn’t the typical route. I started as an automotive technician working on VWs and Audis, learning real hands-on problem solving long before I touched Linux or wrote code. That background shaped how I think today: keep things simple, reliable, and easy to understand.
 
-I developed my leadership abilities by serving as an Orientation Team Leader during COVID, then jumped into Systems Administration for the Computer Science department, which introduced me to Linux, networking, and DevOps. My internship at VMware reinforced just how powerful infrastructure and virtualization can be in tackling big challenges (including reducing environmental impact!). Now, under the guidance of Dr. Craig Partridge, I combine systems administration, C programming, and automation to explore advanced networking and infrastructure solutions.
+After that, I moved into systems administration and research at CSU, where I managed hundreds of Linux systems, automated anything repetitive, and worked on networking, security, and infrastructure projects. I spent a lot of time researching internet transmission errors, building adaptive honeypots, and writing tools in C and Python for system-level debugging. Now at Visa, I focus on Linux infrastructure and reliability at scale.
 
-### 🌟 Fun Facts About Me:
-- 🚗 **Car enthusiast**: Ask me anything about VWs or fun road trips!
-- 🏔️ **Mountain lover**: Whether it’s hiking, skiing, or just enjoying the view, I’m in my happy place when I’m in the mountains.
-- 🧠 **Curious learner**: Currently diving into artificial intelligence & bandit algorithms. Always up for tackling a new tech challenge.
-- 🎮 **Gamer at heart**: If I’m not coding, you might find me exploring open worlds or building cities.
+### 🌟 A little about me
+- 🚗 **Car enthusiast**. I love working on my Audis and my old Tacoma and I definitely own more tools than I need.
+- 🏔️ **Mountains**. Snowboarding, exploring, or just being up there is where I feel the most relaxed.
+- 🧠 **Always learning**. Lately I’ve been diving deeper into security, automation, and intelligent systems.
+- 🎮 **Gamer**. When I’m not building something, I’m probably exploring an open world or playing a sim.
 
-### How to Reach Me:
-📫 Use the contact button on my webpage, send me a message on [LinkedIn](https://www.linkedin.com/in/lcadman/), or find me on Discord (@packetsurge) 🎉.
+### How to reach me
+📫 Use the contact page on my website, message me on [LinkedIn](https://www.linkedin.com/in/lcadman/), or find me on Discord (**@packetsurge**).
 
 ---
 
-Thanks for stopping by my profile! Feel free to explore my repositories and see what I’m up to. Let’s build something amazing together.
+Thanks for stopping by. Feel free to explore my repositories and see what I’m building, experimenting with, or breaking. Let’s make something cool.
